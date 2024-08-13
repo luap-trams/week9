@@ -1,0 +1,23 @@
+{
+  "name": "week9",
+  "version": "1.0.0",
+  "main": "arrays.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luap-trams/week9.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luap-trams/week9/issues"
+  },
+  "homepage": "https://github.com/luap-trams/week9#readme",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.9"
+  }
+}

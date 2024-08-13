@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+body{
+    @apply bg-blue-600  h-full w-full
+}
+
+ul li{
+    @apply inline-flex max-w-80 h-9 bg-blue-400 justify-center text-yellow-400 text-center rounded-md py-6 my-2 px-12
+}
