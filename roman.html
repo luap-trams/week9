@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Figure Converter</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+    <main class="flex flex-col h-screen justify-center items-center bg-slate-950 text-whites space-y-8">
+        <h1 class="uppercase text-3xl text-slate-950 tracking-[20px] font-bold">roman figure converter</h1>
+        <input type="number" name="number" id="num" placeholder="type a number" class="bg-transparent border-b-8 border-fuchsia-900 w-3/5 py-4 my-6 outline-none placeholder:text-slate-950" min="1" max "3999">
+
+        <p class="bg-slate-950 text-white py-2 px-6">result</p>
+    </main>
+<script>
+    const input = document.querySelector('input')
+    const para = document.querySelector('p')
+
+    function roman(){
+        const units = ['', 'i', 'ii', 'iii', 'iv', 'v', 'vii', 'viii', 'ix', 'x']
+        const tens = ['', 'x', 'xx', 'xxx', 'xl', 'l', 'lx','lxx', 'lxxx', 'xc']
+        const hund = ['', 'c', 'cc', 'ccc','cd', 'd', 'dc','dcc','dccc','cm' ]
+        const thous = ['', 'm','mm','mmm']
+
+        let num = input.value
+
+        const fig = num.length == 1 ? units[num] : num.length == 2 ? tens[num[0]].concat(units[num[1]]) : num.length == 3 ? hund[num[0]].concat(tens[num[1]], units[num[2]]) : num.length == 4 && num[0] < 4 ? thous[num[0]].concat(huns[num[1]], tens[num[2]], units[num[3]]) : 'unknown'
+
+        para.textContent = fig.toUpperCase()
+    }
+
+    input.addEventListener('input',roman)
+</script>
+</body>
+</html>
